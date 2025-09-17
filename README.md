@@ -275,11 +275,6 @@ public class Test {
         long indexGen4 = System.currentTimeMillis();
 ```
 
-**File:** src/main/src/test_02/Test.java (L124-124)
-```java
-        System.out.println("=========================搜索时间==================================");
-```
-
 ##### Test.java:197-235
 **File:** src/main/src/test_02/Test.java (L197-235)
 ```java
