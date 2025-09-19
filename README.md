@@ -36,7 +36,9 @@ src/main/src/
 ├── index3/               # Verifiable binary tree indexing
 └── test_02/              # Test suites and benchmarks
 ``` 
-
+### Test Dataset
+- **Document data**: There are 1000+ test document keyword data in the `src/test_data/` directory.
+- **Keyword data**: Corresponding keyword files are located in the `src/keywords_extraction_rake-master/example/input/` directory.
 
 ## Technologies and Dependencies
 
@@ -67,12 +69,12 @@ src/main/src/
 
 2. Navigate to the source directory:
    ```bash
-   cd src/main/src
+   cd src/main/src  
    ```
 
 3. Compile the Java files:
    ```bash
-   javac -cp . test_02/*.java
+   javac -cp . test_02/*.java general_tools/*.java index1/*.java index2/*.java index3/*.java encryption/*/*.java ChainAddress/*.java   
    ```
 
 ## How to Run
@@ -84,7 +86,7 @@ The main test class demonstrates all three indexing schemes: [Test.java:22-39](#
 java -cp . test_02.Test
 ```
 
-**Note**: Before running, update the file paths in the test files to match your local environment:
+**Note**: Before running, update the file paths in the test files `test_02/Test.java` to match your local environment: 
 - Update `directoryPath` for keyword extraction
 - Update document paths for test data
 
@@ -122,6 +124,9 @@ Configure in your test files: [Test.java:73-77](#testjava81-101)
 - **Index1**: Bloom filter size (default: 1000), filter count (default: 500)
 - **Index2**: Hash table maximum size (default: 1000)
 - **Index3**: Maximum size and LSH configuration
+
+### Keyword Extraction
+Extract keywords of 5-9 characters in length from the document
 
 ## How to Debug
 
