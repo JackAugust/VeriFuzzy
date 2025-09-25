@@ -1,25 +1,25 @@
-# DVFS: A Dynamic Verifiable Fuzzy Search Service for Encrypted Cloud Data
+# VeriFuzzy: A Dynamic Verifiable Fuzzy Search Service for Encrypted Cloud Data
 
 Cloud storage introduces critical privacy challenges for encrypted data retrieval, where fuzzy multi-keyword search enables approximate matching while preserving confidentiality. Existing solutions force undesirable trade-offs: linear-search schemes achieve adaptive security at prohibitive computational cost, while tree-based indexes offer sublinear efficiency but expose **branch leakage** vulnerabilities under dynamic operations.  
 
-We propose **DVFS** (Dynamic Verifiable Fuzzy Search)—an IND-CKA2 secure service that simultaneously resolves three core limitations:  
+We propose **VeriFuzzy**, an IND-CKA2 secure service that simultaneously resolves three core limitations:  
 (1) *Adaptive fuzzy search* integrating locality-sensitive hashing with virtual binary trees, eliminating branch leakage while enabling `O(log n)` multi-keyword queries;  
 (2) *Forward-private dynamics* via dual-repository version control, preventing update-triggered information leakage;  
 (3) *Sublinear verifiability* for correctness and completeness through the combination of VBTree and blockchain.  
-DVFS achieves fuzzy search, dynamic updates, and efficient verification under IND-CKA2 security—eliminating historical trade-offs between functionality and security.  
+VeriFuzzy achieves fuzzy search, dynamic updates, and efficient verification under IND-CKA2 security—eliminating historical trade-offs between functionality and security.  
 
 ## Project Overview
 
 This project is a Java-based research project implementing multiple searchable encryption schemes with different indexing approaches, designed for privacy-preserving document search with verification capabilities.
 
-This project demonstrates the practical implementation of our DVFS in a privacy-preserving document search system, including Local Sensitive Hashing, Bloom Filters, and Verifiable Search Trees.
+This project demonstrates the practical implementation of our VeriFuzzy in a privacy-preserving document search system, including Local Sensitive Hashing, Bloom Filters, and Verifiable Search Trees.
 
 **Please note that this project only involves the searchable encryption component of the paper's core content. The blockchain chaincode source code and testing scripts cannot be provided due to commercial confidentiality protection.**
 
 This project implements three distinct searchable encryption index schemes:
 - **Index1**: Bloom filter-based approximate search with LSH (Locality Sensitive Hashing)
 - **Index2**: Hash table-based exact search with cryptographic security
-- **Index3 (our DVSF)**: Enhanced Verifiable Binary Tree (EVBTree) with search result verification [Test.java:81-101](#testjava81-101)
+- **Index3 (our VeriFuzzy)**: Enhanced Verifiable Binary Tree (EVBTree) with search result verification [Test.java:81-101](#testjava81-101)
 
 ## Project Structure 
 
@@ -63,8 +63,8 @@ src/main/src/
 ### Setup Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/JackAugust/DVFS.git
-   cd DVFS
+   git clone https://github.com/JackAugust/VeriFuzzy.git
+   cd VeriFuzzy
    ```
 
 2. Navigate to the source directory:
